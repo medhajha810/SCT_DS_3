@@ -1,0 +1,106 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(120deg, #f6d365, #fda085);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    padding: 2rem;
+  }
+  
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .container {
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem 2rem;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    color: #1e293b;
+    margin-bottom: 1.2rem;
+  }
+  
+  form {
+    margin-bottom: 1.5rem;
+  }
+  
+  input[type="file"] {
+    padding: 0.7rem;
+    border: 1.5px solid #ccc;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  
+  input[type="submit"] {
+    padding: 0.9rem 1.7rem;
+    background: linear-gradient(to right, #2563eb, #3b82f6);
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 0.3rem;
+  }
+  
+  input[type="submit"]:hover {
+    background: linear-gradient(to right, #3b82f6, #2563eb);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+    transform: translateY(-1px);
+  }
+  
+  .prediction {
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #10b981;
+    text-shadow: 0 0 8px #10b98188;
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  img.preview-img {
+    margin-top: 1.2rem;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(15px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      padding: 1.5rem 1rem;
+    }
+  
+    input[type="submit"] {
+      width: 100%;
+    }
+  }
+  
